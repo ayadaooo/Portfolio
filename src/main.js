@@ -1,24 +1,27 @@
 import './style.css'
-import javascriptLogo from './assets/javascript.svg'
 import gw2 from './assets/gw2.jpeg'
-import heroImg from './assets/hero.png'
 import poe from './assets/poe.jpg'
-import song from './assets/Downloads.wav'
+import song from './assets/project-1.wav'
+import headphones from'./assets/headphones.png'
 import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
 <section id="center">
   <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${javascriptLogo}" class="framework" alt="JavaScript logo"/>
-    <img src="${gw2}" class="vite" alt="GW2 logo" />
+    <img src="${headphones}" class="overlay" width="170" height="179">
   </div>
   <div>
     <h1>ABOUT ME</h1>
     <h2>Adrian Yadao</h2>
     <p>Hi my name is <code>Adrian</code> and this is a simple <code>about me</code> page!</p>
+       <p>I am currently a student at <code>NAIT</code> in the <code>Software Development Program</code>.</p>
+       <p>I'm from <code>Edmonton, Alberta, Canada</code> and I am in my first term but I am passionate and always eager to learn more!</p>
   </div>
   <button id="counter" type="button" class="counter"></button>
+  <button type="button" class="date"onclick="document.getElementById('demo').innerHTML = Date()">
+Click me for the date!</button>
+
+<p id="demo"></p>
 </section>
 
 <div class="ticks"></div>
@@ -36,7 +39,7 @@ document.querySelector('#app').innerHTML = `
       Your browser does not support the audio element.
     </audio>
     <p>I like to play video games! </p>
-    <p>My favourite genres are probably MMO'S and ARPG's</p>
+    <p>My favourite genres are MMO'S and ARPG's</p>
     <img class="gw2"src="https://i.postimg.cc/csTCXntt/Wallpaper-08-2560x1440.png" alt="GW2" width="500" height="300">
     <ul>
       <li>
@@ -46,7 +49,7 @@ document.querySelector('#app').innerHTML = `
         </a>
       </li>
       <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+        <a href="https://www.pathofexile.com/" target="_blank">
           <img class="button-icon" src="${poe}" alt="">
           POE
         </a>
@@ -55,13 +58,10 @@ document.querySelector('#app').innerHTML = `
   </div>
   <div id="social">
     <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
+    <h2>Connect with me</h2>
     <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
+      <li><a href="https://github.com/ayadaooo" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/adrian-yadao-137879230/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#linkedin-icon"></use></svg>LinkedIn</a></li>
     </ul>
   </div>
 </section>
@@ -71,3 +71,8 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+
+
+
+

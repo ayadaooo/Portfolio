@@ -38,7 +38,7 @@
     --border: #393434;
     --code-bg: #181b25;
     --accent: #ffa600;
-    --accent-bg: #181b25;
+    --accent-bg: #192036;
     --accent-border: rgb(255, 213, 0);
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
@@ -59,9 +59,6 @@ h2 {
   font-family: var(--heading);
   font-weight: 800;
   color: var(--text-h);
-  &:hover {
-    color: var(--code-bg);
-  }
 }
 
 h1 {
@@ -302,9 +299,9 @@ code {
 }
 
 .gw2 {
-  margin: 300;
-  border-radius: 10px;
-  box-shadow: var(--shadow);
+  margin-top: 30px;
+  border-radius:30px;
+
 }
 
 audio {
@@ -319,5 +316,34 @@ audio {
     cursor: pointer;
     border-style: double;
     border-color: var(--accent);
+  }
+}
+
+.date {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  box-shadow: var(--shadow);
+  border-style: solid;
+  border-color: var(--border);
+
+  &:hover {
+    cursor: pointer;
+    border-style: double;
+    border-color: var(--accent);
+  }
+}
+
+.headphones {
+  border: 2px solid var(--border);
+  position: relative;
+
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
   }
 }
