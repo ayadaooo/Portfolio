@@ -4,10 +4,79 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adrian Yadao | About Me</title>
+    <title>Adrian Yadao | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   </head>
   <body>
-    <div id="app"></div>
+    <nav id="navbar">
+      <span class="nav-name">Adrian Yadao</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="hero">
+      <h1>Hi, I'm <span class="pop">Adrian Yadao</span></h1>
+      <h2 class="pop">Software Developer</h2>
+      <p class="tagline">NAIT Software Development Student | A Developer's Journey</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I'm Adrian, a Software Development student at NAIT in Edmonton, Alberta.</p>
+      <p>I'm passionate about building things for the web and always eager to learn more.</p>
+      <p>I'm excited to contribute my skills to innovative projects and continue my developer journey.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+     <div class="skills-grid">
+  <div class="skill-card">
+    <i class="devicon-html5-plain colored"></i>
+    <p>HTML</p>
+  </div>
+  <div class="skill-card">
+    <i class="devicon-css3-plain colored"></i>
+    <p>CSS</p>
+  </div>
+  <div class="skill-card">
+    <i class="devicon-javascript-plain colored"></i>
+    <p>JavaScript</p>
+  </div>
+  <div class="skill-card">
+    <i class="devicon-python-plain colored"></i>
+    <p>Python</p>
+  </div>
+  <div class="skill-card">
+    <i class="devicon-postgresql-plain colored"></i>
+    <p>SQL</p>
+  </div>
+</div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>About Me Page</h3>
+          <p>Built with HTML, CSS & JavaScript</p>
+          <a href="https://ayadaooo.netlify.app" target="_blank" class="btn-small">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Connect With Me</h2>
+      <div class="contact-links">
+        <a href="https://github.com/ayadaooo" target="_blank" class="btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/adrian-yadao-137879230/" target="_blank" class="btn">LinkedIn</a>
+      </div>
+    </section>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
