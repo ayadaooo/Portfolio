@@ -35,6 +35,13 @@ body {
   color: white;
   font-size: 18px;
   font-weight: 700;
+  transition: color 0.3s, opacity 0.3s;
+  text-decoration: none;
+}
+
+.nav-name:hover {
+  color: var(--pop);
+  cursor: pointer;
 }
 
 .nav-links {
@@ -100,9 +107,9 @@ body {
 }
 /* ABOUT ME */
 #about {
-  padding: 80px 60px;
+  padding: 80px 20px;
   text-align: center;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -114,7 +121,7 @@ body {
 }
 
 #about p {
-    font-size: 16px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--text);
 }
@@ -155,14 +162,8 @@ body {
 
 .skill-card:hover {
   border-color: var(--pop);
-  transform: translateY(-4px);
+  transform: translateY(-15px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
-
-.skill-icon {
-  width: 40px;
-  height: 40px;
-  color: var(--pop);
 }
 
 .skill-card p {
@@ -202,7 +203,7 @@ body {
 
 .project-card:hover {
   border-color: var(--pop);
-  transform: translateY(-4px);
+  transform: translateY(-8px);
 }
 
 .project-card h3 {
@@ -228,7 +229,7 @@ body {
 }
 
 .btn-small:hover {
-  opacity: 0.85;
+  opacity: 0.70;
 }
 
 /* CONTACT */
