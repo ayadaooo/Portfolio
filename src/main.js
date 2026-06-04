@@ -25,6 +25,7 @@ function type() {
         index++
         setTimeout(type, 100)
     }   else {
+        nameElement.classList.add('done')
         type2()
     }
 }
@@ -36,9 +37,12 @@ const title = 'Software Developer'
 let index2 = 0
 
 function type2() {
+    titleElement.classList.add('typing')
     if (index2 < title.length) {
         titleElement.textContent += title[index2]
         index2++
         setTimeout(type2, 80)
+    }   else {
+        titleElement.classList.add('done')
     }
 }

@@ -258,3 +258,28 @@ html {
   justify-content: center;
   gap: 16px;
 }
+
+#name::after, #title::after {
+    content: '|';
+    animation: blink 0.9s infinite;
+    color: white;
+}
+
+#title::after {
+    display: none;
+}
+
+#title.typing::after {
+    display: inline;
+    opacity: 1;
+    animation: blink 0.7s infinite;
+}
+
+.done::after {
+    display: none !important;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0; }
+}
