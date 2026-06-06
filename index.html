@@ -24,126 +24,131 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <canvas id="particles"></canvas>
+    <div id="content">
+      <section id="hero">
+        <h1>Hi, I'm <span class="pop" id="name"></span></h1>
+        <h2><span class="pop" id="title"></span></h2>
+        <p class="tagline">NAIT Software Development Student</p>
+        <a href="#projects" class="btn">View My Work</a>
+      </section>
+      <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p>
+          I'm Adrian — a Software Development student at NAIT in Edmonton,
+          Alberta. I've been into tech since I was a kid: homebrewing handhelds,
+          building PCs, and taking apart anything I could get my hands on.
+        </p>
+        <p>
+          Now I'm channeling that into software — building for the web, learning
+          systems from the ground up, and working towards fullstack development.
+        </p>
+        <p>
+          When I'm not coding, I'm making music or getting too invested in an
+          RPG.
+        </p>
+      </section>
 
-    <section id="hero">
-      <canvas id="particles"></canvas>
-      <h1>Hi, I'm <span class="pop" id="name"></span></h1>
-      <h2><span class="pop" id="title"></span></h2>
-      <p class="tagline">NAIT Software Development Student</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </section>
-    <section id="about" class="fade-in">
-      <h2>About Me</h2>
-      <p>
-        I'm Adrian — a Software Development student at NAIT in Edmonton,
-        Alberta. I've been into tech since I was a kid: homebrewing handhelds,
-        building PCs, and taking apart anything I could get my hands on.
-      </p>
-      <p>
-        Now I'm channeling that into software — building for the web, learning
-        systems from the ground up, and working towards fullstack development.
-      </p>
-      <p>
-        When I'm not coding, I'm making music or getting too invested in an RPG.
-      </p>
-    </section>
-
-    <section id="skills" class="fade-in">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="devicon-html5-plain colored"></i>
-          <p>HTML</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-css3-plain colored"></i>
-          <p>CSS</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-javascript-plain colored"></i>
-          <p>JavaScript</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-python-plain colored"></i>
-          <p>Python</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-postgresql-plain colored"></i>
-          <p>SQL</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-git-plain colored"></i>
-          <p>Git</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-vitejs-plain colored"></i>
-          <p>Vite</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-figma-plain colored"></i>
-          <p>Figma</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="fade-in">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>About Me Page</h3>
-          <p>A website with all my projects, contact, and my skills</p>
-          <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
+      <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="devicon-html5-plain colored"></i>
+            <p>HTML</p>
           </div>
+          <div class="skill-card">
+            <i class="devicon-css3-plain colored"></i>
+            <p>CSS</p>
+          </div>
+          <div class="skill-card">
+            <i class="devicon-javascript-plain colored"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-card">
+            <i class="devicon-python-plain colored"></i>
+            <p>Python</p>
+          </div>
+          <div class="skill-card">
+            <i class="devicon-postgresql-plain colored"></i>
+            <p>SQL</p>
+          </div>
+          <div class="skill-card">
+            <i class="devicon-git-plain colored"></i>
+            <p>Git</p>
+          </div>
+          <div class="skill-card">
+            <i class="devicon-vitejs-plain colored"></i>
+            <p>Vite</p>
+          </div>
+          <div class="skill-card">
+            <i class="devicon-figma-plain colored"></i>
+            <p>Figma</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>About Me Page</h3>
+            <p>A website with all my projects, contact, and my skills</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a
+              href="https://adrian-yadao-portfolio.netlify.app"
+              target="_blank"
+              class="btn-small"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card wnrs">
+            <h3>We're Not Really Strangers</h3>
+            <p>A website to connect two people on a deeper level</p>
+            <div class="tags">
+              <span class="tag wnrs">HTML</span>
+              <span class="tag wnrs">CSS</span>
+              <span class="tag wnrs">JavaScript</span>
+            </div>
+            <a href="#" target="_blank" class="btn-small disabled"
+              >Coming Soon</a
+            >
+          </div>
+          <div class="project-card clinic">
+            <h3>Massage Clinic Website</h3>
+            <p>
+              Clinic Website that focuses on profiles, therapists, and bookings.
+            </p>
+            <div class="tags">
+              <span class="tag clinic">HTML</span>
+              <span class="tag clinic">CSS</span>
+              <span class="tag clinic">JavaScript</span>
+            </div>
+            <a href="#" target="_blank" class="btn-small disabled"
+              >Coming Soon</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="fade-in">
+        <h2>Connect With Me</h2>
+        <div class="contact-links">
+          <a href="https://github.com/ayadaooo" target="_blank" class="btn"
+            >GitHub</a
+          >
           <a
-            href="https://adrian-yadao-portfolio.netlify.app"
+            href="https://www.linkedin.com/in/adrian-yadao-137879230/"
             target="_blank"
-            class="btn-small"
-            >View Project</a
+            class="btn"
+            >LinkedIn</a
           >
         </div>
-        <div class="project-card wnrs">
-          <h3>We're Not Really Strangers</h3>
-          <p>A website to connect two people on a deeper level</p>
-          <div class="tags">
-            <span class="tag wnrs">HTML</span>
-            <span class="tag wnrs">CSS</span>
-            <span class="tag wnrs">JavaScript</span>
-          </div>
-          <a href="#" target="_blank" class="btn-small disabled">Coming Soon</a>
-        </div>
-        <div class="project-card clinic">
-          <h3>Massage Clinic Website</h3>
-          <p>
-            Clinic Website that focuses on profiles, therapists, and bookings.
-          </p>
-          <div class="tags">
-            <span class="tag clinic">HTML</span>
-            <span class="tag clinic">CSS</span>
-            <span class="tag clinic">JavaScript</span>
-          </div>
-          <a href="#" target="_blank" class="btn-small disabled">Coming Soon</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="fade-in">
-      <h2>Connect With Me</h2>
-      <div class="contact-links">
-        <a href="https://github.com/ayadaooo" target="_blank" class="btn"
-          >GitHub</a
-        >
-        <a
-          href="https://www.linkedin.com/in/adrian-yadao-137879230/"
-          target="_blank"
-          class="btn"
-          >LinkedIn</a
-        >
-      </div>
-    </section>
-
+      </section>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

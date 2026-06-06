@@ -53,8 +53,13 @@ function type2() {
 const canvas = document.querySelector("#particles");
 const ctx = canvas.getContext("2d");
 
-canvas.width = canvas.offsetWidth;
-canvas.height = canvas.offsetHeight;
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = document.documentElement.scrollHeight;
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
 const particles = [];
 
@@ -75,7 +80,7 @@ for (let i = 0; i < 80; i++) {
 const drawParticle = (particle) => {
   ctx.beginPath();
   ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-  ctx.fillStyle = "rgba(255, 166, 0, 0.5)";
+  ctx.fillStyle = "rgb(255, 255, 255)";
   ctx.fill();
 };
 
