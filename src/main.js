@@ -26,14 +26,12 @@ function type() {
   if (index < name.length) {
     nameElement.textContent += name[index];
     index++;
-    setTimeout(type, 100);
+    setTimeout(type, 120);
   } else {
     nameElement.classList.add("done");
     type2();
   }
 }
-
-type();
 
 const titleElement = document.querySelector("#title");
 const title = "Software Developer";
@@ -44,7 +42,7 @@ function type2() {
   if (index2 < title.length) {
     titleElement.textContent += title[index2];
     index2++;
-    setTimeout(type2, 80);
+    setTimeout(type2, 100);
   } else {
     titleElement.classList.add("done");
   }
@@ -139,3 +137,32 @@ window.addEventListener("mousemove", (e) => {
   cursor.style.top = e.clientY + "px";
 });
 animate();
+
+const introElement = document.querySelector("#intro-text");
+const introText = "LET YOUR LIGHT BURN BRIGHT";
+let index3 = 0;
+
+function type3() {
+  if (index3 < introText.length) {
+    introElement.textContent += introText[index3];
+    index3++;
+    setTimeout(type3, 120);
+  } else {
+    setTimeout(() => {
+      const intro = document.querySelector("#intro");
+      intro.style.opacity = "0";
+
+      setTimeout(() => {
+        type();
+      }, 300);
+
+      setTimeout(() => {
+        intro.style.display = "none";
+      }, 600);
+    }, 300);
+  }
+}
+
+type3();
+
+type3();
