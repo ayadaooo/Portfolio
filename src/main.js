@@ -64,15 +64,18 @@ window.addEventListener("resize", resizeCanvas);
 const particles = [];
 
 const createParticle = () => {
+  const speedX = (Math.random() - 0.5) * 0.1;
+  const speedY = Math.random() * 0.2 + 0.3;
   return {
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    size: Math.random() * 2.5 + 0.5,
-    speedX: (Math.random() - 0.5) * 0.1,
-    speedY: Math.random() * 0.2 + 0.3,
+    size: Math.random() * 1.5 + 0.5,
+    speedX,
+    speedY,
+    originalSpeedX: speedX,
+    originalSpeedY: speedY,
   };
 };
-
 for (let i = 0; i < 300; i++) {
   particles.push(createParticle());
 }
@@ -80,7 +83,7 @@ for (let i = 0; i < 300; i++) {
 const drawParticle = (particle) => {
   ctx.beginPath();
   ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-  ctx.fillStyle = "rgb(255, 255, 255)";
+  ctx.fillStyle = "rgb(200, 225, 255)";
   ctx.fill();
 };
 
@@ -103,10 +106,28 @@ const animate = () => {
     if (particle.x < 0) {
       particle.x = canvas.width;
     }
+    const dx = mouse.x - particle.x;
+    const dy = mouse.y - particle.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    if (distance < 100) {
+      const force = (100 - distance) / 100;
+      particle.x -= (dx / distance) * force * 2;
+      particle.y -= (dy / distance) * force * 2;
+    } else {
+      particle.speedX = particle.originalSpeedX;
+      particle.speedY = particle.originalSpeedY;
+    }
     drawParticle(particle);
   });
 
   requestAnimationFrame(animate);
 };
 
+const mouse = { x: 0, y: 0 };
+
+window.addEventListener("mousemove", (e) => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY + window.scrollY;
+});
 animate();
