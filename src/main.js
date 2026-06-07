@@ -126,8 +126,16 @@ const animate = () => {
 
 const mouse = { x: 0, y: 0 };
 
+const cursor = document.createElement("div");
+cursor.id = "cursor";
+document.body.appendChild(cursor);
+
 window.addEventListener("mousemove", (e) => {
   mouse.x = e.clientX;
   mouse.y = e.clientY + window.scrollY;
+  mouse.x = e.clientX;
+  mouse.y = e.clientY + window.scrollY;
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
 });
 animate();

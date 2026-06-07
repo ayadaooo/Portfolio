@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 :root {
@@ -38,6 +39,21 @@ html {
   transform: translateY(0px);
 }
 
+/* Cursor */
+
+#cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #ffa600;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  box-shadow:
+    0 0 8px #ffa600,
+    0 0 16px #ffa600;
+}
 /* NAVBAR */
 #navbar {
   display: flex;
@@ -209,7 +225,6 @@ html {
     box-shadow 0.3s,
     border-color 0.3s,
     transform 0.3s;
-  cursor: pointer;
 }
 
 .skill-card:hover {
@@ -382,4 +397,14 @@ html {
   50% {
     opacity: 0;
   }
+}
+
+#light {
+  font-size: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 20px;
 }
