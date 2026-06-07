@@ -67,13 +67,13 @@ const createParticle = () => {
   return {
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    size: Math.random() * 3 + 1,
-    speedX: Math.random() - 0.5,
-    speedY: Math.random() - 0.5,
+    size: Math.random() * 2.5 + 0.5,
+    speedX: (Math.random() - 0.5) * 0.1,
+    speedY: Math.random() * 0.2 + 0.3,
   };
 };
 
-for (let i = 0; i < 80; i++) {
+for (let i = 0; i < 300; i++) {
   particles.push(createParticle());
 }
 
@@ -90,6 +90,19 @@ const animate = () => {
   particles.forEach((particle) => {
     particle.x += particle.speedX;
     particle.y += particle.speedY;
+
+    if (particle.y > canvas.height) {
+      particle.y = 0;
+      particle.x = Math.random() * canvas.width;
+    }
+
+    if (particle.x > canvas.width) {
+      particle.x = 0;
+    }
+
+    if (particle.x < 0) {
+      particle.x = canvas.width;
+    }
     drawParticle(particle);
   });
 
